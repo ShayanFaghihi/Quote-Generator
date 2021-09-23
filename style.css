@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Roboto+Mono:wght@300;400;700&family=Rubik:wght@300;400;700;900&display=swap');
+
+*,*::after,*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #333;
+    min-height: 100vh;
+    background: url('pattern.jpg');
+    background-repeat: repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: min(800px, 60%);
+    margin: 0 auto;
+    border-radius: 7px;
+    background-color: rgba(255,255,255,.6);
+    box-shadow: 2px 2px 10px rgba(0,0,0,.2);
+    padding: 4rem 2rem;
+}
+
+
+.quote-text {margin-bottom: 2rem;}
+.quote-text p {
+    text-align: justify;
+    font-family: 'Italianno', cursive;
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+.quote-author {
+    font-size: 1.5rem;
+    font-family: 'Italianno', cursive;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+    color: darkcyan;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    margin-bottom: -2rem;
+}
+
+.btn {
+    background-color: darkcyan;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-family: inherit;
+    padding: .5rem 1rem;
+    font-weight: 900;
+    cursor: pointer;
+    transition: transform .1s ease-in;
+}
+
+.btn:active {
+    transform: translateY(3px);
+}
