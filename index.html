@@ -10,15 +10,20 @@
 </head>
 <body>
     <div class="container">
-        <div class="quote-text">
-            <p id="quote"></p>
+        <div class="quote-container hidden">
+    
+            <div class="quote-text">
+                <p id="quote"></p>
+            </div>
+            <div class="quote-author" id="quoteAuthor"></div>
+    
         </div>
-        <div class="quote-author" id="quoteAuthor"></div>
         <div class="buttons">
             <button title="Tweet Now!" class="btn twitter"><i class="fab fa-twitter"></i></button>
             <button title="Get a New Quote" class="btn get-quote-btn" id="quoteBtn">New Quote</button>
         </div>
     </div>
+    <div class="loader"></div>
 
     <script src="script.js"></script>
 </body>

@@ -18,6 +18,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .container {
@@ -68,4 +69,29 @@ body {
 
 .btn:active {
     transform: translateY(3px);
+}
+
+
+/* Loader */
+.loader {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 5px solid #ededed;
+    border-top-color: rgba(0,0,0,.5);
+    position: absolute;
+    animation: loading 1s infinite linear;
+}
+
+@keyframes loading {
+  
+   100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+.hidden {
+    display: none;
 }
