@@ -6,18 +6,19 @@ const shareBtn = document.querySelector(".twitter");
 const loader = document.querySelector(".loader");
 
 function showLoaderSpinner() {
-  loader.hide = false;
-  quoteContainer.hide = true;
+  loader.hidden = false;
+  quoteContainer.hidden = true;
 }
 
 function hideLoaderSpinner() {
-  loader.hide = true;
-  quoteContainer.hide = false;
+  loader.hidden = true;
+  quoteContainer.hidden = false;
 }
 
 async function getQuote() {
+  showLoaderSpinner();
   // using proxy to bypass the CORS
-  const proxy = "https://cors-anywhere.herokuapp.com/";
+  const proxy = "https://secret-ocean-38471.herokuapp.com/";
 
   const api_Url =
     "http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json";
@@ -25,17 +26,13 @@ async function getQuote() {
   try {
     const request = await fetch(proxy + api_Url);
     const response = await request.json();
-
-    // Showing Loader before showing the quote
-    showLoaderSpinner();
-
     quote.innerHTML = response.quoteText;
     author.innerHTML = response.quoteAuthor ? response.quoteAuthor : "Unknown";
-
-    hideLoaderSpinner();
+    
   } catch (error) {
     getQuote();
   }
+  hideLoaderSpinner();
 }
 getQuote();
 
